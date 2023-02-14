@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 100%;
+            width: 100%;
+            align-items: center;
+
+
+        }
+
+        .container2 {
+            background-color: bisque;
+
+            border-radius: 15px;
+            width: 350px;
+            height: 350px;
+            margin-left: 50px;
+        }
+
+        .container3 {
+            background-color: bisque;
+            border-radius: 15px;
+            width: 350px;
+            height: 350px;
+            margin-left: 50px;
+        }
+
+        .header {
+            text-align: center;
+        }
+
+        #t1,
+        #t2 {
+            margin-left: 25px;
+        }
+
+        #p1,
+        #p2 {
+            margin-left: 5px;
+        }
+
+        #btn1,
+        #btn2 {
+            margin: 20px;
+            margin-left: 60px;
+            height: 40px;
+            width: 80px;
+            align-self: center;
+            border-radius: 15px;
+            background-color: blueviolet;
+            color: white;
+            border: none;
+        }
+
+        a {
+            margin-top: 200px;
+            margin-left: 60px;
+            text-decoration: none;
+            color: black;
+        }
+
+        label {
+            font-size: 25px;
+
+        }
+
+        .container {
+            height: 100vh;
+            background-color: black;
+
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrrEmqWPtC8pNGPMrMqT99rAV-boto1lxLrQ&usqp=CAU');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .block1 {
+            float: left;
+            height: 100vh;
+            width: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="block1">
+
+            <div class="container1">
+                <div class="container2" align="center">
+                    <div class="header">
+                        <h2>ADMIN LOGIN</h2>
+                    </div>
+                    <form>
+
+                        <label>Name:</label>
+                        <input type="text" name="" id="t1" placeholder="enter your name"></tr> <br> <br>
+                        <label for="">Password:</label><input type="password" name="" id="p1"
+                            placeholder="enter password"> <br>
+                        <br> <br> <br> <br>
+                        <button id="btn1"  type=" submit" onclick="return f1()">submit</button>
+                    </form>
+                </div>
+                <div class="container3" align="center">
+                    <div class="header">
+                        <h2>USER LOGIN</h2>
+                    </div>
+                    <form>
+
+                        <label>Name:</label><input type="text" name="" id="t2" placeholder="enter your name"> <br> <br>
+                        <label for="">Password:</label><input type="password" name="" id="p2"
+                            placeholder="enter password"> <br>
+                        <br> <br> <br> <br>
+                        <a href="pic.html"><button id="btn2"  type=" submit" onclick=" 
+                         window.open('./pic.html')">submit</button></a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script defer>
+        let n1 = document.getElementById('t1');
+        let pa1 = document.getElementById('p1');
+        let n2 = document.getElementById('t2');
+        let pa2 = document.getElementById('p2');
+        function f1() {
+            if (n1.value == "") 
+            {
+                alert('Enter admin  name ');
+                console.log(n1.value)
+                return false;
+            }
+            if (pa1.value == "") 
+            {
+                alert('Enter password');
+                return false;
+            }
+        }
+        function f2() {
+            if (n2.value == "")
+             {
+                alert('Enter user name');
+                return false;
+            }
+            if (pa2.value == "")
+             {
+                alert('Enter password');
+                return false;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

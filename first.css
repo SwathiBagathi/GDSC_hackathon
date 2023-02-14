@@ -1,0 +1,57 @@
+
+body{
+    background-image: url('https://images.indianexpress.com/2021/08/dogs-1200.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+ul{
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: 56px;
+    background-color: black;
+    line-height: 56px;
+    border-radius: 15px;
+    font-size: 30px;
+   width: 100%;
+}
+ li{
+  float:left;
+  border-right:1px solid #156ee2 ;
+  border-right-style: hidden;
+}
+li:hover{
+   background-color: #156ee2;
+}
+a{
+     display: block;
+     padding: 0 30px;
+     color: #fff;
+    text-decoration: none;
+}
+.btn1{
+     size:60px ;
+     border-radius: 15px;
+     display: block;
+     margin: auto;
+     height: 50px;
+     width: 200px;
+     background-color: blueviolet;
+     color: white;
+     border: none;
+     font-size: 20px;
+    
+}
+.img:hover{
+    background-color: none;
+}
+.matter{
+    font-style:bold;
+    color: white;
+    font-size: 55px;
+    text-align: center;
+    margin-top: 350px;
+}

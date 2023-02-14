@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title><style>
+        body{
+            background-color: rgb(234, 225, 243);
+        }
+       
+        h1{
+            color: blueviolet;
+            font-style: italic;
+            font-size: 50px;
+            margin: auto;
+            margin-top: 200px;
+        }
+        .container{
+              height: 300px;
+              width: 600px;
+             
+              margin:auto;
+        }
+        td{
+            font-size: 30px;
+        }
+        input{
+               width: 270px;
+               border-radius: 15px;
+               border: none;
+               height: 25px;
+               border: 3px solid blueviolet;
+        }
+        table{
+            border-spacing: 15px;
+            margin-top: 20px;
+        }
+        #btn1{
+            width: 90px;
+            height: 30px;
+            border-radius: 10px;
+            margin-left: 210px;
+            margin-top: 20px;
+            background-color: blueviolet;
+            color: white;
+        }
+    </style>
+    
+</head>
+<body>
+       <h1 align="center">REGISTRATION FORM</h1>
+       <div class="container">
+               <table align="center">
+                 <tr>
+                   <td>Name:</td>
+                    <td><input type="text" name="" id="t1"></td>
+                 </tr>
+                 <tr>
+                    <td>Password:</td>
+                     <td><input type="password" name="" id="password"></td>
+                 </tr>
+                  <tr>
+                    <td>Email:</td>
+                     <td><input type="text" name="" id="em"></td>
+                  </tr>
+                  <tr>
+                    <td>Phone Number:</td>
+                     <td><input type="text" name="" id="ph"></td>
+                  </tr>
+                
+               </table>
+
+               <button onclick="return f()" id="btn1">submit</button>
+               <script defer> 
+                let n1 = document.getElementById('t1');
+               let pas = document.getElementById('password');
+               let e = document.getElementById('em'); 
+               let p = document.getElementById('ph');
+               let regx1 = /[7-9][0-9]{9}$/; let regx2 = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+               function f() {
+                   if (n1.value=="")
+                    {
+                       alert("Name should be filled");
+                       return false;
+                   }
+                   if (pas.value == "") 
+                   {
+                       alert("password should be filled")
+                       return false
+                   } if (pas.value.length > 10) 
+                   {
+                       alert("Password should not be morethan 10 characters");
+                       return false;
+                   }
+                   if (e.value == "")
+                    {
+                       alert('email should not be empty');
+                       return false;
+                   } 
+                   if (!(regx2.test(e.value))) 
+                   { 
+                       alert("enter valid email")
+                       return false;
+                    } 
+                       
+                       if (p.value.length != 10) 
+                   {
+                       alert('phone number must conatain only 10 digits')
+                       return false;
+                   } 
+                   if (!(regx1.test(p.value)))
+                    { 
+                       alert("enter valid phone number");
+                        return false;
+                    }
+               } 
+               </script>
+
+
+
+
+
+
+
+
+
+       </div>
+</body>
+</html>
